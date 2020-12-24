@@ -18,8 +18,17 @@ function isAdult(age) {
 // checkMultiplicity(15, 5) // true
 // checkMultiplicity(15, 4) // false
 
+function checkMultiplicity (num1, num2) {
+  
+  const numConverted1 = +num1;
+  const numConverted2 = +num2;
 
+  if(isNaN(numConverted1 - numConverted2)) {
+    return null;
+  }
 
+  return num1%num2 === 0 ? true : false;
+}
 
 // 3. Проверка возможности треугольника. Создать функцию которая принимает длины треугольника; функция возвращает true если треугольник возможен и false если нет
 
