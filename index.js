@@ -4,12 +4,12 @@
 
 function isAdult(age) {
 
-  const convertedAge = +age;
-  if (isNaN(convertedAge)) {
+  const ageConverted = +age;
+  if (isNaN(ageConverted)) {
     return null;
   }
 
-  return convertedAge > 18 ? true : false;
+  return ageConverted > 18 ? true : false;
 }
 
 // 2. Создать функцию checkMultiplicity, которая принимает два числа и проверяет кратность первого вторым:
