@@ -32,9 +32,22 @@ function checkMultiplicity (num1, num2) {
 
 // 3. Проверка возможности треугольника. Создать функцию которая принимает длины треугольника; функция возвращает true если треугольник возможен и false если нет
 
+function checkTriangle (a, b, c) {
 
+  const aConverted = +a;
+  const bConverted = +b;
+  const cConverted = +c;
+
+  if(isNaN(aConverted - bConverted - cConverted)){
+    return null;
+  }
+
+  if((aConverted + bConverted > cConverted) && (aConverted + cConverted > bConverted) && (cConverted + bConverted > aConverted)) {
+    return true;
+  }
+
+  return false;
+}
 
 
 // 4. Написать функции расчета площадей (поверхности) следующих фигур/тел: ромб, цилиндр, треугольника, прямоугольника
-
-
