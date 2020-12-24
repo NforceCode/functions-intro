@@ -69,4 +69,14 @@ function triangleArea (numA, numB, numC) {
   
 }
 
-// 4. Написать функции расчета площадей (поверхности) следующих фигур/тел: ромб, цилиндр, треугольника, прямоугольника
+function rectangleArea (numA, numB) {
+
+  const a = +numA;
+  const b = +numB;
+
+  if(isNaN(a - b)){
+    return null;
+  }
+
+  return a*b;
+}
