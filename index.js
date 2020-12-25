@@ -94,7 +94,17 @@ function rhombusArea (numA, numB) {
   
 }
 
-  if(isNaN(a - b)){
+function cylinderArea (numR, numH) {
+
+  const lengthR = +numR;
+  const lengthH = +numH;
+
+  if(isNaN(lengthR - lengthH)){
+    return null;
+  }
+
+  return 2 * Math.PI * lengthR * lengthH;
+}
     return null;
   }
 
