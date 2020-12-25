@@ -1,25 +1,29 @@
-// 1. Создать функцию isAdult, которая будет проверять возраст пользователя на совершеннолетие:
-// isAdult(20); // true
-// isAdult(4); // false
+/**
+ * Проверяет пользователя на сеовршеннолетие 
+ * @param {number} age возраст пользователя
+ * @returns {(boolean|null)} true если пользователю 18 лет и больше, false если ему меньше 18 и null если введенные данные не были числом
+ */
 
 function isAdult(age) {
 
   const ageConverted = +age;
+
   if (isNaN(ageConverted)) {
     return null;
   }
 
-  return ageConverted > 18 ? true : false;
+  return ageConverted >= 18 ? true : false;
 }
 
-// 2. Создать функцию checkMultiplicity, которая принимает два числа и проверяет кратность первого вторым:
-// checkMultiplicity(25, 5) // true
-// checkMultiplicity(15, 3) // true
-// checkMultiplicity(15, 5) // true
-// checkMultiplicity(15, 4) // false
+/**
+ * Проверяет кратность первого числа второму
+ * @param {number} num1 число, проверяемое на кратность
+ * @param {number} num2 число, на кратность которому будут проверять
+ * @returns {(boolean|null)} true если первое число кратно второму иначе false, null если введенные данные не были числами
+ */
 
 function checkMultiplicity (num1, num2) {
-  
+
   const numConverted1 = +num1;
   const numConverted2 = +num2;
 
@@ -27,10 +31,16 @@ function checkMultiplicity (num1, num2) {
     return null;
   }
 
-  return num1%num2 === 0 ? true : false;
+  return numConverted1 % numConverted2 === 0 ? true : false;
 }
 
-// 3. Проверка возможности треугольника. Создать функцию которая принимает длины треугольника; функция возвращает true если треугольник возможен и false если нет
+/**
+ * Проверка возможности треугольника
+ * @param {number} a длина стороны треугольника
+ * @param {number} b длина стороны треугольника
+ * @param {number} c длина стороны треугольника
+ * @returns {(boolean|null)} true если треугольник возможен, false если нет и null если введенные данные не были числами
+ */
 
 function checkTriangle (a, b, c) {
 
@@ -50,10 +60,14 @@ function checkTriangle (a, b, c) {
 }
 
 // 4. Написать функции расчета площадей (поверхности) следующих фигур/тел: ромб, цилиндр, треугольника, прямоугольника
-
+/**
+ * Расчет площади треугольника по формуле Герона
+ * @param {number} numA длина стороны треугольника
+ * @param {number} numB длина стороны треугольника
+ * @param {number} numC длина стороны треугольника
+ * @returns {(number|null)} площадь треугольника либо null если введенные данные не были числами
+ */
 function triangleArea (numA, numB, numC) {
-
-  // реализация нахождения площади треугольника по трем сторонам 
 
   const a = +numA;
   const b = +numB;
@@ -69,6 +83,13 @@ function triangleArea (numA, numB, numC) {
   
 }
 
+/**
+ * Расчет площади прямогульника
+ * @param {number} numA длина стороны прямогульника
+ * @param {number} numB длина стороны прямогульника
+ * @returns {(number|null)} площадь прямоугольника либо null если введенные данные не были числами
+ */
+
 function rectangleArea (numA, numB) {
 
   const lengthA = +numA;
@@ -80,6 +101,13 @@ function rectangleArea (numA, numB) {
 
   return lengthA*lengthB;
 }
+
+/**
+ * Расчет площади ромба по двум диагоналям
+ * @param {number} numA диагональ ромба
+ * @param {number} numB диагональ ромба
+ * @returns {(number|null)} площадь ромба либо null если введенные данные не были числами
+ */
 
 function rhombusArea (numA, numB) {
 
@@ -94,6 +122,13 @@ function rhombusArea (numA, numB) {
   
 }
 
+/**
+ * Расчет площади цилиндра
+ * @param {*} numR радиус цилиндра
+ * @param {*} numH высота цилиндра
+ * @returns {(number|null)} площадь цилиндра либо null если введенные данные не были числами
+ */
+
 function cylinderArea (numR, numH) {
 
   const lengthR = +numR;
@@ -105,6 +140,15 @@ function cylinderArea (numR, numH) {
 
   return 2 * Math.PI * lengthR * lengthH;
 }
+
+/**
+ * Расчет площади трапеции по длине двух оснований и высоте
+ * @param {number} numA длина основания
+ * @param {number} numB длина основания
+ * @param {number} numH длина высоты
+ * @returns {(number|null)} площадь трапеции либо null если введенные данные не были числами
+ */
+
 function trapezoidArea (numA, numB, numH) {
 
   const lengthA = +numA;
