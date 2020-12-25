@@ -71,8 +71,16 @@ function triangleArea (numA, numB, numC) {
 
 function rectangleArea (numA, numB) {
 
-  const a = +numA;
-  const b = +numB;
+  const lengthA = +numA;
+  const lengthB = +numB;
+
+  if(isNaN(lengthA - lengthB)){
+    return null;
+  }
+
+  return lengthA*lengthB;
+}
+
 
   if(isNaN(a - b)){
     return null;
