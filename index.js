@@ -105,8 +105,15 @@ function cylinderArea (numR, numH) {
 
   return 2 * Math.PI * lengthR * lengthH;
 }
+function trapezoidArea (numA, numB, numH) {
+
+  const lengthA = +numA;
+  const lengthB = +numB;
+  const lengthH = +numH;
+
+  if(isNaN(lengthA - lengthB - lengthH)){
     return null;
   }
 
-  return a*b;
+  return 0.5 * (lengthA + lengthB) * lengthH;
 }
