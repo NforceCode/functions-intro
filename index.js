@@ -81,6 +81,18 @@ function rectangleArea (numA, numB) {
   return lengthA*lengthB;
 }
 
+function rhombusArea (numA, numB) {
+
+  const lengthA = +numA;
+  const lengthB = +numB;
+
+  if(isNaN(lengthA - lengthB)){
+    return null;
+  }
+
+  return lengthA * lengthB * 0.5;
+  
+}
 
   if(isNaN(a - b)){
     return null;
