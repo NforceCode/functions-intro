@@ -36,30 +36,30 @@ function checkMultiplicity (num1, num2) {
 
 /**
  * Проверка возможности треугольника
- * @param {number} a длина стороны треугольника
- * @param {number} b длина стороны треугольника
- * @param {number} c длина стороны треугольника
+ * @param {number} numA длина стороны треугольника
+ * @param {number} numB длина стороны треугольника
+ * @param {number} numC длина стороны треугольника
  * @returns {(boolean|null)} true если треугольник возможен, false если нет и null если введенные данные не были числами
  */
 
-function checkTriangle (a, b, c) {
+function checkTriangle (numA, numB, numC) {
 
-  const aConverted = +a;
-  const bConverted = +b;
-  const cConverted = +c;
+  const lengthA = +numA;
+  const lengthB = +numB;
+  const lengthC = +numC;
 
-  if(isNaN(aConverted - bConverted - cConverted)){
+  if(isNaN(lengthA - lengthB - lengthC)){
     return null;
   }
 
-  if((aConverted + bConverted > cConverted) && (aConverted + cConverted > bConverted) && (cConverted + bConverted > aConverted)) {
+  if((lengthA + lengthB > lengthC) && (lengthA + lengthC > lengthB) && (lengthC + lengthB > lengthA)) {
     return true;
   }
 
   return false;
 }
 
-// 4. Написать функции расчета площадей (поверхности) следующих фигур/тел: ромб, цилиндр, треугольника, прямоугольника
+
 /**
  * Расчет площади треугольника по формуле Герона
  * @param {number} numA длина стороны треугольника
@@ -67,19 +67,20 @@ function checkTriangle (a, b, c) {
  * @param {number} numC длина стороны треугольника
  * @returns {(number|null)} площадь треугольника либо null если введенные данные не были числами
  */
+
 function triangleArea (numA, numB, numC) {
 
-  const a = +numA;
-  const b = +numB;
-  const c = +numC;
+  const lengthA = +numA;
+  const lengthB = +numB;
+  const lengthC = +numC;
 
-  if(isNaN(a - b - c)){
+  if(isNaN(lengthA - lengthB - lengthC)){
     return null;
   }
 
-  const p = (a + b + c) / 2;
+  const p = (lengthA +lengthB + lengthC) / 2;
 
-  return (p*(p-a)*(p-b)*(p-c)) ** (1/2);
+  return (p*(p-lengthA)*(p-lengthB)*(p-lengthC)) ** (1/2);
   
 }
 
@@ -99,7 +100,7 @@ function rectangleArea (numA, numB) {
     return null;
   }
 
-  return lengthA*lengthB;
+  return lengthA * lengthB;
 }
 
 /**
