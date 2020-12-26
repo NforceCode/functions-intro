@@ -68,7 +68,7 @@ function checkTriangle (numA, numB, numC) {
  * @returns {(number|null)} площадь треугольника либо null если введенные данные не были числами
  */
 
-function triangleArea (numA, numB, numC) {
+function getTriangleArea (numA, numB, numC) {
 
   const lengthA = +numA;
   const lengthB = +numB;
@@ -91,7 +91,7 @@ function triangleArea (numA, numB, numC) {
  * @returns {(number|null)} площадь прямоугольника либо null если введенные данные не были числами
  */
 
-function rectangleArea (numA, numB) {
+function getRectangleArea (numA, numB) {
 
   const lengthA = +numA;
   const lengthB = +numB;
@@ -110,7 +110,7 @@ function rectangleArea (numA, numB) {
  * @returns {(number|null)} площадь ромба либо null если введенные данные не были числами
  */
 
-function rhombusArea (numA, numB) {
+function getRhombusArea (numA, numB) {
 
   const lengthA = +numA;
   const lengthB = +numB;
@@ -130,7 +130,7 @@ function rhombusArea (numA, numB) {
  * @returns {(number|null)} площадь цилиндра либо null если введенные данные не были числами
  */
 
-function cylinderArea (numR, numH) {
+function getCylinderArea (numR, numH) {
 
   const lengthR = +numR;
   const lengthH = +numH;
@@ -150,7 +150,7 @@ function cylinderArea (numR, numH) {
  * @returns {(number|null)} площадь трапеции либо null если введенные данные не были числами
  */
 
-function trapezoidArea (numA, numB, numH) {
+function getTrapezoidArea (numA, numB, numH) {
 
   const lengthA = +numA;
   const lengthB = +numB;
